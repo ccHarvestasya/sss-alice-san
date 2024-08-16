@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Safty Signer aLice Extension",
+  "description": "aLiceディープリンクをSSS Extensionで使用できるようにします。",
+  "version": "0.0.0",
+  "background": {
+    "service_worker": "back.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["index.js"],
+      "css": ["global.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "resources": ["embed.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["webNavigation"]
+}

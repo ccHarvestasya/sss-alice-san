@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>hogehoge</title>
+    <script>
+        let url = new URL(window.location.href);
+
+        // URLSearchParamsオブジェクトを取得
+        let params = url.searchParams;
+
+        // getメソッド
+        console.log(params.get('id')); // 5
+        console.log(params.get('mode')); // read
+
+        // getAllメソッド
+        console.log(params.getAll('mode'));
+        // (3) ["read", "premium", "testuser"]
+
+        // forEachメソッド
+        params.forEach(function (value, key) {
+            console.log(key + " => " + value);
+        });
+
+        // entriesメソッド
+        let entries = params.entries();
+        for (let entry of entries) {
+            console.log(entry[0] + " => " + entry[1]);
+        }
+
+        // keysメソッド
+        let keys = params.keys();
+        for (let key of keys) {
+            console.log(key);
+        }
+
+        // valuesメソッド
+        let values = params.values();
+        for (let value of values) {
+            console.log(value);
+        }
+
+        document.getElementById("urlparam").innerHTML = "hogehgoegheogheo";
+    </script>
+</head>
+
+<body>
+    <p>haaaaaaaa</p>
+    <p>[<span id="urlparam"></span>]</p>
+</body>
+
+</html>
