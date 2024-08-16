@@ -23,6 +23,7 @@ window.addEventListener(
               console.log(ev.data.data.callback)
               const callback = Buffer.from(ev.data.data.callback, 'hex').toString('utf-8')
               const networkType = getActiveNetworkType() == 104 ? 'MainNet' : 'TestNet'
+              // TODO: パラメータなしの判定が必要(結合開始が?か&か判断するため)
               const callbackUrl = callback + `&pubkey=${getActivePublicKey()}&network=${networkType}`
               console.log(callbackUrl)
               location.href = callbackUrl
