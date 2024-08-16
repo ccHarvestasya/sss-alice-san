@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Safty Signer aLice Extension",
-  "description": "aLiceディープリンクをSSS Extensionで使用できるようにします。",
+  "name": "SSSアリスさん",
+  "description": "aLiceのリンクをSSS Extensionで使用できるようにします。",
   "version": "0.0.0",
   "background": {
     "service_worker": "back.js"

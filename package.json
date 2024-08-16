@@ -22,6 +22,7 @@
     "vite": "^5.2.6"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "sss-module": "^1.0.4"
   },
   "volta": {
